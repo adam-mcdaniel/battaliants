@@ -22,6 +22,7 @@ one_way_collision_margin = 128.0
 scale = Vector2( 0.2, 0.2 )
 frames = ExtResource( 2 )
 animation = "worker"
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D/AnimatedSprite"]
