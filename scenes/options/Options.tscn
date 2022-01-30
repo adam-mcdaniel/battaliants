@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/options/Options.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="optionContainer" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_top = 71.0
+margin_right = 343.0
+margin_bottom = 207.0
+rect_scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingsContainer" type="HBoxContainer" parent="optionContainer"]
+margin_right = 339.0
+margin_bottom = 67.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Names" type="VBoxContainer" parent="optionContainer/settingsContainer"]
+margin_left = 55.0
+margin_right = 125.0
+margin_bottom = 67.0
+
+[node name="Label" type="Label" parent="optionContainer/settingsContainer/Names"]
+margin_right = 70.0
+margin_bottom = 14.0
+text = "Fx"
+align = 2
+
+[node name="Label2" type="Label" parent="optionContainer/settingsContainer/Names"]
+margin_top = 18.0
+margin_right = 70.0
+margin_bottom = 32.0
+text = "Music"
+align = 2
+
+[node name="Label3" type="Label" parent="optionContainer/settingsContainer/Names"]
+margin_top = 36.0
+margin_right = 70.0
+margin_bottom = 67.0
+text = "Text Speed
+"
+align = 2
+
+[node name="Sliders" type="VBoxContainer" parent="optionContainer/settingsContainer"]
+margin_left = 129.0
+margin_right = 279.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 20, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FxSlider" type="HSlider" parent="optionContainer/settingsContainer/Sliders"]
+margin_right = 150.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 150, 0 )
+value = 100.0
+
+[node name="MusicSlider" type="HSlider" parent="optionContainer/settingsContainer/Sliders"]
+margin_top = 20.0
+margin_right = 150.0
+margin_bottom = 36.0
+value = 100.0
+
+[node name="HSlider" type="HSlider" parent="optionContainer/settingsContainer/Sliders"]
+margin_top = 40.0
+margin_right = 150.0
+margin_bottom = 56.0
+max_value = 101.0
+value = 101.0
+
+[node name="Values" type="VBoxContainer" parent="optionContainer/settingsContainer"]
+margin_left = 283.0
+margin_right = 283.0
+margin_bottom = 67.0
+
+[node name="Fx_val" type="Label" parent="optionContainer/settingsContainer/Values"]
+margin_bottom = 14.0
+
+[node name="Music_val" type="Label" parent="optionContainer/settingsContainer/Values"]
+margin_top = 18.0
+margin_bottom = 32.0
+
+[node name="Text_val" type="Label" parent="optionContainer/settingsContainer/Values"]
+margin_top = 36.0
+margin_bottom = 50.0
+
+[node name="Sample_text" type="Label" parent="optionContainer"]
+margin_top = 71.0
+margin_right = 339.0
+margin_bottom = 136.0
+text = "Ants are very cool. They are my
+favorite insect and nobody can
+tell me otherwise. Personally
+I welcome our ant overlords"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1.0
+margin_top = 518.0
+margin_right = 186.0
+margin_bottom = 598.0
+text = "Save & Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="optionContainer/settingsContainer/Sliders/FxSlider" to="." method="_on_FxSlider_value_changed"]
+[connection signal="value_changed" from="optionContainer/settingsContainer/Sliders/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="optionContainer/settingsContainer/Sliders/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

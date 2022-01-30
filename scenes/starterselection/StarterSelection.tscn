@@ -1,0 +1,195 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/cmu-typewriter/Typewriter.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/starterselection/StarterSelection.gd" type="Script" id=2]
+[ext_resource path="res://ants.tres" type="SpriteFrames" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 208.0
+margin_right = 1021.0
+margin_bottom = 509.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leafcutterant" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 252.0
+margin_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( -281, -54 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="HBoxContainer/Leafcutterant"]
+margin_right = 252.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Leafcutter"
+align = 1
+
+[node name="Description" type="Label" parent="HBoxContainer/Leafcutterant"]
+margin_top = 45.0
+margin_right = 252.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Defensive"
+align = 1
+autowrap = true
+
+[node name="leafselect" type="Button" parent="HBoxContainer/Leafcutterant"]
+margin_top = 63.0
+margin_right = 252.0
+margin_bottom = 83.0
+text = "Select Leafcutter"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="HBoxContainer/Leafcutterant"]
+scale = Vector2( 0.25, 0.25 )
+frames = ExtResource( 3 )
+animation = "leaf_worker"
+playing = true
+offset = Vector2( 500, 700 )
+
+[node name="Bulletant" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 256.0
+margin_right = 508.0
+margin_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( -281, -54 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="HBoxContainer/Bulletant"]
+margin_right = 252.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Bulletant"
+align = 1
+
+[node name="Description" type="Label" parent="HBoxContainer/Bulletant"]
+margin_top = 45.0
+margin_right = 252.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Balanced"
+align = 1
+autowrap = true
+
+[node name="bulletselect" type="Button" parent="HBoxContainer/Bulletant"]
+margin_top = 63.0
+margin_right = 252.0
+margin_bottom = 83.0
+text = "Select Bulletant"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="HBoxContainer/Bulletant"]
+scale = Vector2( 0.25, 0.25 )
+frames = ExtResource( 3 )
+animation = "bullet_worker"
+playing = true
+offset = Vector2( 500, 700 )
+
+[node name="Fireant" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 512.0
+margin_right = 764.0
+margin_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( -281, -54 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="HBoxContainer/Fireant"]
+margin_right = 252.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Fireant"
+align = 1
+
+[node name="Description" type="Label" parent="HBoxContainer/Fireant"]
+margin_top = 45.0
+margin_right = 252.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Offensive"
+align = 1
+autowrap = true
+
+[node name="fireselect" type="Button" parent="HBoxContainer/Fireant"]
+margin_top = 63.0
+margin_right = 252.0
+margin_bottom = 83.0
+text = "Select Fireant"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="HBoxContainer/Fireant"]
+scale = Vector2( 0.25, 0.25 )
+frames = ExtResource( 3 )
+animation = "red_worker"
+frame = 1
+playing = true
+offset = Vector2( 500, 700 )
+
+[node name="Crazyant" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 768.0
+margin_right = 1021.0
+margin_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( -281, -54 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer/Crazyant"]
+margin_right = 253.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Crazyant"
+align = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/Crazyant"]
+margin_top = 45.0
+margin_right = 253.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Chaos Incarnate"
+align = 1
+autowrap = true
+
+[node name="crazyselect" type="Button" parent="HBoxContainer/Crazyant"]
+margin_top = 63.0
+margin_right = 253.0
+margin_bottom = 83.0
+text = "Select Crazyant"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="HBoxContainer/Crazyant"]
+scale = Vector2( 0.25, 0.25 )
+frames = ExtResource( 3 )
+animation = "crazy_worker"
+playing = true
+offset = Vector2( 500, 700 )
+
+[connection signal="pressed" from="HBoxContainer/Leafcutterant/leafselect" to="." method="_on_leafselect_pressed"]
+[connection signal="pressed" from="HBoxContainer/Bulletant/bulletselect" to="." method="_on_bulletselect_pressed"]
+[connection signal="pressed" from="HBoxContainer/Fireant/fireselect" to="." method="_on_fireselect_pressed"]
+[connection signal="pressed" from="HBoxContainer/Crazyant/crazyselect" to="." method="_on_crazyselect_pressed"]

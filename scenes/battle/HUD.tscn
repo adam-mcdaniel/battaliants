@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/connection_ii/ConnectionII.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/battle/HUD.gd" type="Script" id=2]
+[ext_resource path="res://ants.tres" type="SpriteFrames" id=3]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -1, 142 )
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 173.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "HARVEY - 70 HP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 3.0
+margin_top = 19.0
+margin_right = 176.0
+margin_bottom = 33.0
+value = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 92.5, -74.5 )
+scale = Vector2( 0.227865, 0.215 )
+frames = ExtResource( 3 )
+animation = "larvae"
+playing = true
