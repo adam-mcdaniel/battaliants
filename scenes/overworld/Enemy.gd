@@ -1,13 +1,13 @@
 extends Node2D
 
-const Ant = preload("res://Ant.gd")
+const Ant = preload("res://scripts/Ant.gd")
 
-const Worker = preload("res://ants/Worker.gd")
-const Larvae = preload("res://ants/Larvae.gd")
-const Buff = preload("res://ants/Buff.gd")
-const Queen = preload("res://ants/Queen.gd")
-const Cant = preload("res://ants/Cant.gd")
-const Neophyte = preload("res://ants/Neophyte.gd")
+const Worker = preload("res://scripts/Worker.gd")
+const Larvae = preload("res://scripts/Larvae.gd")
+const Buff = preload("res://scripts/Buff.gd")
+const Queen = preload("res://scripts/Queen.gd")
+const Cant = preload("res://scripts/Cant.gd")
+const Neophyte = preload("res://scripts/Neophyte.gd")
 
 onready var ant = Ant.new()
 
@@ -30,11 +30,12 @@ func get_ant_object():
 		ant.Caste.QUEEN: result = Queen.new()
 		ant.Caste.NEOPHYTE: result = Neophyte.new()
 	result.species = ant.get_species()
+	result.set_stats()
 	return result
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ant.species = randi() % 5
+	ant.species = randi() % 4
 	ant.caste = randi() % 5
 	$KinematicBody2D/AnimatedSprite.animation = ant.get_animation_name()
 

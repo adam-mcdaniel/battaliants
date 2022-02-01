@@ -22,6 +22,10 @@ const ROOM_TILES_TALL = 10
 const TILE_WIDTH  = 100
 const TILE_HEIGHT = 100
 
+onready var bgm = $AudioStreamPlayer
+var volume = 100
+var sfx = 100
+
 var ROOMS = [
 	[
 		[W, W, W, W, E, E, W, W, W, W],
@@ -189,6 +193,8 @@ func start_battle(player_party, enemy_party):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	load_settings()
+	bgm.volume_db = volume
 	for floor_num in range(FLOORS):
 		for room_x in range(-FLOOR_ROOMS_WIDE/2, FLOOR_ROOMS_WIDE/2):
 			for x in range(ROOM_TILES_WIDE):
@@ -241,4 +247,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
+func load_settings():
+	var config = ConfigFile.new()
+	config.load("settings.cfg")
+	sfx = config.get_value("set", "fx", 100)
+	volume = config.get_value("set", "music", 100)
+	if sfx == 0:
+		sfx = -80
+	else:
+		sfx = -30 * (1-sfx/100)
+	if volume == 0:
+		volume == -80
+	else:
+		volume = -30 * (1-volume/100)

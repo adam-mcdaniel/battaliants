@@ -1,6 +1,6 @@
 extends Node2D
 
-const Ant = preload("res://Ant.gd")
+const Ant = preload("res://scripts/Ant.gd")
 var Caste = Ant.new().Caste
 
 func setup(ant, leftfacing=false):
