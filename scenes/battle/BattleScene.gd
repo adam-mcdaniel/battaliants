@@ -4,20 +4,26 @@ var selected_target = null
 var selected_move = null
 
 var BattleState = load("res://BattleState.gd")
-const Ant = preload("res://Ant.gd")
-const Larvae = preload("res://ants/Larvae.gd")
-const Worker = preload("res://ants/Worker.gd")
-const Queen = preload("res://ants/Queen.gd")
+const Ant = preload("res://scripts/Ant.gd")
+const Larvae = preload("res://scripts/Larvae.gd")
+const Worker = preload("res://scripts/Worker.gd")
+const Queen = preload("res://scripts/Queen.gd")
 
 const HUD = preload("res://scenes/battle/HUD.tscn")
 var player_hud = HUD.instance()
 var enemy_hud = HUD.instance()
+
+onready var bgm = $AudioStreamPlayer
+var volume = 100
+var sfx = 100
 
 signal won_battle(modified_player_party, last_enemy_ant)
 signal lost_battle()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	load_settings()
+	bgm.volume_db = volume
 	player_hud.position.x = 110
 	player_hud.position.y = 330
 	
@@ -103,6 +109,20 @@ func setup_buttons():
 	
 	$GridContainer/Button6.text = "Swap Out"
 	$GridContainer/Button6.connect("pressed", self, "swap")
+
+func load_settings():
+	var config = ConfigFile.new()
+	config.load("settings.cfg")
+	sfx = config.get_value("set", "fx", 100)
+	volume = config.get_value("set", "music", 100)
+	if sfx == 0:
+		sfx = -80
+	else:
+		sfx = -30 * (1-sfx/100)
+	if volume == 0:
+		volume == -80
+	else:
+		volume = -30 * (1-volume/100)
 
 func do_nothing(): pass
 

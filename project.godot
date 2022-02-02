@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Ant",
 "language": "GDScript",
-"path": "res://Ant.gd"
+"path": "res://scripts/Ant.gd"
 }, {
 "base": "Reference",
 "class": "BattleState",
@@ -22,17 +22,22 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Bite",
 "language": "GDScript",
-"path": "res://moves/Bite.gd"
+"path": "res://scripts/moves/Bite.gd"
 }, {
 "base": "Reference",
 "class": "Feed",
 "language": "GDScript",
-"path": "res://moves/Feed.gd"
+"path": "res://scripts/moves/Feed.gd"
 }, {
 "base": "Reference",
 "class": "Hatch",
 "language": "GDScript",
-"path": "res://moves/Hatch.gd"
+"path": "res://scripts/moves/Hatch.gd"
+}, {
+"base": "Reference",
+"class": "JsonReader",
+"language": "GDScript",
+"path": "res://scripts/JsonReader.gd"
 }, {
 "base": "Reference",
 "class": "Move",
@@ -45,6 +50,7 @@ _global_script_class_icons={
 "Bite": "",
 "Feed": "",
 "Hatch": "",
+"JsonReader": "",
 "Move": ""
 }
 

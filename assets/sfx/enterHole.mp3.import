@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/enterHole.mp3-23cd8d8b87ca4102c4fe7e613ac406d4.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/enterHole.mp3"
+dest_files=[ "res://.import/enterHole.mp3-23cd8d8b87ca4102c4fe7e613ac406d4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

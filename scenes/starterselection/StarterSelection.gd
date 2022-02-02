@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const Worker = preload("res://ants/Worker.gd")
+const Worker = preload("res://scripts/Worker.gd")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -21,25 +21,28 @@ signal choose_start(ant)
 
 func _on_leafselect_pressed():
 	var ant = Worker.new()
-	ant.current_hp += 10
 	ant.species = ant.Species.LEAFCUTTER
+	ant.set_stats()
+	ant.current_hp += 10
 	emit_signal("choose_starter", ant)
 
 func _on_bulletselect_pressed():
 	var ant = Worker.new()
-	ant.current_hp += 10
 	ant.species = ant.Species.BULLET
+	ant.set_stats()
+	ant.current_hp += 10
 	emit_signal("choose_starter", ant)
 
 func _on_fireselect_pressed():
 	var ant = Worker.new()
-	ant.current_hp += 10
 	ant.species = ant.Species.FIRE
+	ant.set_stats()
+	ant.current_hp += 10
 	emit_signal("choose_starter", ant)
 
 func _on_crazyselect_pressed():
 	var ant = Worker.new()
-	ant.current_hp += 10
 	ant.species = ant.Species.CRAZY
+	ant.set_stats()
+	ant.current_hp += 10
 	emit_signal("choose_starter", ant)
-	

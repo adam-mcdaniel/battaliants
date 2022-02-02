@@ -35,4 +35,5 @@ position = Vector2( 92.5, -74.5 )
 scale = Vector2( 0.227865, 0.215 )
 frames = ExtResource( 3 )
 animation = "larvae"
+frame = 1
 playing = true

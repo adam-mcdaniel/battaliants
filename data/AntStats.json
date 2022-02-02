@@ -1,0 +1,40 @@
+{
+   "Worker":{
+      "Fireant" : {"hp": 80, "atk": 95, "def": 65, "spd": 100},
+      "Bulletant" : {"hp": 80, "atk": 95, "def": 65, "spd": 100},
+      "Crazyant" : {"min_hp" : 80, "max_hp": 90, "min_atk":80, "max_atk":95, "min_def":65, "max_def":100, "min_spd":75, "max_spd":100},
+      "Leafcutter Ant" : {"hp": 90, "atk": 80, "def": 85, "spd": 85}
+   },
+   "Buff":{
+      "Fireant" : {"hp": 75, "atk": 145, "def": 50, "spd": 95},
+      "Bulletant" : {"hp": 75, "atk": 145, "def": 50, "spd": 95},
+      "Crazyant" : {"min_hp" : 75, "max_hp": 125, "min_atk":105, "max_atk":145, "min_def":50, "max_def":75, "min_spd":70, "max_spd":95},
+      "Leafcutter Ant" : {"hp": 125, "atk": 105, "def": 65, "spd": 70}
+   },
+   "Larvae":{
+      "Fireant" : {"hp": 30, "atk": 40, "def": 170, "spd": 25},
+      "Bulletant" : {"hp": 30, "atk": 40, "def": 170, "spd": 25},
+      "Crazyant" : {"min_hp" : 20, "max_hp": 35, "min_atk":10, "max_atk":40, "min_def":170, "max_def":230, "min_spd":5, "max_spd":25},
+      "Leafcutter Ant" : {"hp": 35, "atk": 15, "def": 200, "spd": 15}
+   },
+   "Queen":{
+      "Fireant" : {"hp": 70, "atk": 125, "def": 70, "spd": 110},
+      "Bulletant" : {"hp": 70, "atk": 125, "def": 70, "spd": 110},
+      "Crazyant" : {"min_hp" : 70, "max_hp": 80, "min_atk":95, "max_atk":125, "min_def":70, "max_def":125, "min_spd":80, "max_spd":110},
+      "Leafcutter Ant" : {"hp": 80, "atk": 105, "def": 110, "spd": 80}
+
+   },
+   "Cant" : {
+      "Fireant" : {"hp": 80, "atk": 95, "def": 65, "spd": 55},
+      "Bulletant" : {"hp": 70, "atk": 75, "def": 106, "spd": 35},
+      "Crazyant" : {"min_hp" : 70, "max_hp": 100, "min_atk":70, "max_atk":95, "min_def":65, "max_def":105, "min_spd":35, "max_spd":55},
+      "Leafcutter Ant" : {"hp": 100, "atk": 70, "def": 70, "spd": 45}
+   },
+   "Neophyte":{
+      "Fireant" : {"hp": 70, "atk": 120, "def": 55, "spd": 125},
+      "Bulletant" : {"hp": 70, "atk": 120, "def": 55, "spd": 125},
+      "Crazyant" : {"min_hp" : 55, "max_hp": 110, "min_atk":65, "max_atk":120, "min_def":55, "max_def":125, "min_spd":90, "max_spd":125},
+      "Leafcutter Ant" : {"hp": 110, "atk": 65, "def": 105, "spd": 90}
+
+   }
+}
